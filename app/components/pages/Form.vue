@@ -16,8 +16,15 @@
                 <StackLayout col="0" row="0">
                     <GridLayout rows="50, *" columns="*">
                         <FlexboxLayout row="0" col="0" justifyContent="space-between" alignItems="center">
-                            <Label marginLeft="30" text="" class="font-awesome" textWrap="true" @tap="control--" />
-                            <Label marginRight="30" text="" class="font-awesome" textWrap="true" @tap="goToIndex()" />
+                            <GridLayout rows="*" columns="*, *">
+                                <FlexboxLayout row="0" col="0" @tap="control--" justifyContent="flex-start" alignItems="center">
+                                    <Label marginLeft="30" text="" class="font-awesome" textWrap="true" />
+                                </FlexboxLayout>
+                                <FlexboxLayout row="0" col="1" @tap="goToIndex()" justifyContent="flex-end" alignItems="center">
+                                    <Label marginRight="30" text="" class="font-awesome" textWrap="true" />
+                                </FlexboxLayout>
+                            </GridLayout>
+                            
                         </FlexboxLayout>
 
                         <StackLayout row="1" col="0" backgroundColor="white">
@@ -100,7 +107,7 @@
                                     <FlexboxLayout row="1" col="0" justifyContent="center" alignItems="center" flexDirection="column">
                                         <Label textAlignment="center" fontWeight="bold" fontSize="25" color="black" text="De acuerdo a tus respuestas, necesitas buscar atencion medica inmediatamente" textWrap="true" />
                                         
-                                        <Button text="FINALIZAR" marginTop="10" backgroundColor="#2F4095" color="white" width="50%" />
+                                        <Button text="FINALIZAR" marginTop="10" backgroundColor="#2F4095" color="white" width="50%" @tap="goToIndex()" />
                                     </FlexboxLayout>
                                 </GridLayout>
                             </StackLayout>
@@ -495,7 +502,7 @@ export default {
 
     data(){
         return{
-            control: 3
+            control: 1
             ,
             // Form
             form1: false,
