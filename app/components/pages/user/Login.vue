@@ -48,7 +48,7 @@
 
                         <Button text="Iniciar sesión" borderRadius="20" backgroundColor="#2F4095" marginTop="20" color="white" @tap="loginEmail" />
                         
-                        <Label text="Inciar sesión con:" marginTop="40" textWrap="true" horizontalAlignment="center" />
+                        <Label text="Inciar sesión con:" marginTop="30" textWrap="true" horizontalAlignment="center" />
                         <FlexboxLayout justifyContent="center" alignItems="center" marginTop="10">
                             <Image src="~/assets/images/social-icon-1.png" width="30" marginRight="5" stretch="aspectFit" @tap="loginGoogle" />
                             <Image src="~/assets/images/social-icon-2.png" width="30" marginLeft="5" stretch="aspectFit" @tap="loginFacebook" />
@@ -56,7 +56,8 @@
                         </FlexboxLayout>
                         <!-- <Button borderRadius="20" text="Login con Google" marginTop="20" color="white" backgroundColor="red" @tap="loginGoogle" />
                         <Button borderRadius="20" text="Login con Facebook" marginTop="10" color="white" backgroundColor="blue" @tap="loginFacebook" /> -->
-                        <Button v-if="!android" borderRadius="20" text="Login con Apple" marginTop="10" color="white" backgroundColor="black" @tap="loginApple" />
+                        <!-- <Button v-if="!android" class="font-awesome" fontWeight="100" borderRadius="5" text=" Iniciar sesion con Apple" marginTop="10" color="white" backgroundColor="black" @tap="loginApple" /> -->
+                        <Image v-if="!android" marginTop="10" src="~/assets/images/sign_in.png" width="100%" stretch="aspectFit" @tap="loginApple" />
                     </StackLayout>
                 </StackLayout>
             </StackLayout>
@@ -310,8 +311,8 @@ export default {
             catch(e){
                 console.log(e)
                 alert({
-                    title: "Error de version",
-                    message: `El inicio con apple requiere una version de iOS 13 o superior, tu version es ${platformModule.device.osVersion}`,
+                    title: "Error de versión",
+                    message: `El inicio con Apple requiere una versión de iOS 13 o superior, tu versión es ${platformModule.device.osVersion}`,
                     okButtonText: "Entendido"
                 }).then(() => {
                     console.log("Alert dialog closed");
