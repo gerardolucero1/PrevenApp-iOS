@@ -15,17 +15,15 @@
             <GridLayout ~mainContent columns="*" rows="*" backgroundColor="#F3F3F3">
                 <StackLayout col="0" row="0">
                     <GridLayout rows="50, *" columns="*">
-                        <FlexboxLayout row="0" col="0" justifyContent="space-between" alignItems="center">
-                            <GridLayout rows="*" columns="*, *">
-                                <FlexboxLayout row="0" col="0" @tap="control--" justifyContent="flex-start" alignItems="center">
-                                    <Label marginLeft="30" text="" class="font-awesome" textWrap="true" />
-                                </FlexboxLayout>
-                                <FlexboxLayout row="0" col="1" @tap="goToIndex()" justifyContent="flex-end" alignItems="center">
-                                    <Label marginRight="30" text="" class="font-awesome" textWrap="true" />
-                                </FlexboxLayout>
-                            </GridLayout>
-                            
-                        </FlexboxLayout>
+                        <GridLayout row="0" col="0" rows="50" columns="*, *">
+                            <FlexboxLayout row="0" col="0" justifyContent="center" alignItems="flex-start" flexDirection="column" @tap="control--">
+                                <Label marginLeft="30" text="" class="font-awesome" textWrap="true" />
+                            </FlexboxLayout>
+                            <FlexboxLayout row="0" col="1" justifyContent="center" alignItems="flex-end" flexDirection="column" @tap="goToIndex()">
+                                <Label marginRight="30" text="" class="font-awesome" textWrap="true" />
+                            </FlexboxLayout>   
+                        </GridLayout>
+                        
 
                         <StackLayout row="1" col="0" backgroundColor="white">
                             
@@ -93,7 +91,8 @@
                                         </GridLayout>
                                     </FlexboxLayout>
                                     <FlexboxLayout row="3" col="0" justifyContent="center" alignItems="center" borderRadius="10">
-                                        <Button text="SIGUIENTE" backgroundColor="#2F4095" color="white" width="50%" @tap="control++" />
+                                        <!-- <Button text="SIGUIENTE" backgroundColor="#2F4095" color="white" width="50%" @tap="control++" /> -->
+                                        <Label @tap="control++" text="SIGUIENTE" textWrap="true" backgroundColor="#2F4095" color="white" padding="5 15" />
                                     </FlexboxLayout>
                                 </GridLayout>
                             </StackLayout>
@@ -107,7 +106,8 @@
                                     <FlexboxLayout row="1" col="0" justifyContent="center" alignItems="center" flexDirection="column">
                                         <Label textAlignment="center" fontWeight="bold" fontSize="25" color="black" text="De acuerdo a tus respuestas, necesitas buscar atencion medica inmediatamente" textWrap="true" />
                                         
-                                        <Button text="FINALIZAR" marginTop="10" backgroundColor="#2F4095" color="white" width="50%" @tap="goToIndex()" />
+                                        <!-- <Button text="FINALIZAR" marginTop="10" backgroundColor="#2F4095" color="white" width="50%" /> -->
+                                        <Label @tap="goToHome" text="FINALIZAR" textWrap="true" backgroundColor="#2F4095" color="white" padding="5 15" />
                                     </FlexboxLayout>
                                 </GridLayout>
                             </StackLayout>
@@ -146,7 +146,8 @@
                                 </FlexboxLayout>
 
                                 <FlexboxLayout marginTop="10" justifyContent="center" alignItems="center" flexDirection="column">
-                                    <Button text="SIGUIENTE" marginTop="10" backgroundColor="#2F4095" color="white" width="50%" @tap="control++" />
+                                    <!-- <Button text="SIGUIENTE" marginTop="10" backgroundColor="#2F4095" color="white" width="50%" @tap="control++" /> -->
+                                    <Label @tap="control++" text="SIGUIENTE" textWrap="true" backgroundColor="#2F4095" color="white" padding="5 15" />
                                 </FlexboxLayout>
                             </StackLayout>
 
@@ -237,7 +238,8 @@
                                     </ScrollView>
 
                                     <FlexboxLayout row="2" col="0" marginTop="10" justifyContent="center" alignItems="center" flexDirection="column">
-                                        <Button text="SIGUIENTE" marginTop="10" backgroundColor="#2F4095" color="white" width="50%" @tap="control++" />
+                                        <!-- <Button text="SIGUIENTE" marginTop="10" backgroundColor="#2F4095" color="white" width="50%" @tap="control++" /> -->
+                                        <Label @tap="control++" text="SIGUIENTE" textWrap="true" backgroundColor="#2F4095" color="white" padding="5 15" />
                                     </FlexboxLayout>
                                 </GridLayout>
                             </StackLayout>
@@ -337,7 +339,8 @@
                                     </ScrollView>
 
                                     <FlexboxLayout row="2" col="0" marginTop="10" justifyContent="center" alignItems="center" flexDirection="column">
-                                        <Button text="SIGUIENTE" marginTop="10" backgroundColor="#2F4095" color="white" width="50%" @tap="control++" />
+                                        <!-- <Button text="SIGUIENTE" marginTop="10" backgroundColor="#2F4095" color="white" width="50%" @tap="control++" /> -->
+                                        <Label @tap="control++" text="SIGUIENTE" textWrap="true" backgroundColor="#2F4095" color="white" padding="5 15" />
                                     </FlexboxLayout>
                                 </GridLayout>
                             </StackLayout>
@@ -369,7 +372,8 @@
                                 </FlexboxLayout>
 
                                 <FlexboxLayout marginTop="10" justifyContent="center" alignItems="center" flexDirection="column">
-                                    <Button text="SIGUIENTE" marginTop="10" backgroundColor="#2F4095" color="white" width="50%" @tap="control++" />
+                                    <!-- <Button text="SIGUIENTE" marginTop="10" backgroundColor="#2F4095" color="white" width="50%" @tap="control++" /> -->
+                                    <Label @tap="control++" text="SIGUIENTE" textWrap="true" backgroundColor="#2F4095" color="white" padding="5 15" />
                                 </FlexboxLayout>
                             </StackLayout>
 
@@ -416,7 +420,8 @@
                                 </FlexboxLayout>
 
                                 <FlexboxLayout marginTop="10" justifyContent="center" alignItems="center" flexDirection="column">
-                                    <Button text="SIGUIENTE" marginTop="10" backgroundColor="#2F4095" color="white" width="50%" @tap="control++" />
+                                    <!-- <Button text="SIGUIENTE" marginTop="10" backgroundColor="#2F4095" color="white" width="50%" @tap="control++" /> -->
+                                    <Label @tap="control++" text="SIGUIENTE" textWrap="true" backgroundColor="#2F4095" color="white" padding="5 15" />
                                 </FlexboxLayout>
                             </StackLayout>
 
@@ -447,7 +452,8 @@
                                 </FlexboxLayout>
 
                                 <FlexboxLayout marginTop="10" justifyContent="center" alignItems="center" flexDirection="column">
-                                    <Button text="SIGUIENTE" marginTop="10" backgroundColor="#2F4095" color="white" width="50%" @tap="control++" />
+                                    <!-- <Button text="SIGUIENTE" marginTop="10" backgroundColor="#2F4095" color="white" width="50%" @tap="control++" /> -->
+                                    <Label @tap="control++" text="SIGUIENTE" textWrap="true" backgroundColor="#2F4095" color="white" padding="5 15" />
                                 </FlexboxLayout>
                             </StackLayout>
 
@@ -502,8 +508,7 @@ export default {
 
     data(){
         return{
-            control: 1
-            ,
+            control: 1,
             // Form
             form1: false,
             form2: 1,
@@ -550,7 +555,7 @@ export default {
 
     watch: {
         control(){
-
+            console.log(this.control)
             if(this.control == 0){
                 this.control = 1
             }
